@@ -1,0 +1,304 @@
+/*^^^^^^^^^^^^^_________FONTS___________^^^^^^^^^^^^^ */
+
+body {
+  /* Font Family */
+  font-family: Arial, sans-serif; /* Sets the font family to Arial or a generic sans-serif font */
+
+  /* Font Size */
+  font-size: 36px; /* Sets the font size to 36 pixels */
+  font-size: 16px; /* Sets the font size to 16 pixels 
+
+    /* Font Style */
+  font-style: italic; /* Sets the font style to italic 
+
+    /* Font Weight */
+  font-weight: bold; /* Sets the font weight to bold 
+
+    /* Text Decoration */
+  text-decoration: underline; /* Sets text decoration to underline for links 
+
+    /* Text Transform */
+  text-transform: uppercase; /* Transforms text to uppercase */
+
+  /* Line Height */
+  line-height: 1.5; /* Sets the line height to 1.5 times the font size */
+
+  /* Letter Spacing */
+  letter-spacing: 2px; /* Sets the spacing between letters to 2 pixels */
+
+  /* Text Alignment */
+  text-align: center; /* Aligns text to the center */
+
+  /* Text Shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a shadow with horizontal and vertical offsets, blur radius, and color */
+}
+
+/*^^^^^^^^^^^^^_________BACKGROUND___________^^^^^^^^^^^^^ */
+body {
+  background: #f0f0f0
+    url("https://www.tinkerteens.com/wp-content/uploads/2023/11/screenshot-www.tinkerteens.com-2023.11.15-16_32_42.png")
+    no-repeat center/cover; /* Background color, image, repeat, position, and size */
+}
+
+div {
+  border: 1px solid black; /* Border */
+  border-radius: 5px; /* Border radius */
+  background-color: rgba(
+    255,
+    0,
+    0,
+    0.5
+  ); /* Background color with alpha transparency */
+}
+
+.btn {
+  background-color: #007bff; /* Button background color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Border */
+  border-radius: 3px; /* Border radius */
+}
+
+.card {
+  background-image: linear-gradient(
+    to right,
+    #ff0000,
+    #00ff00
+  ); /* Background gradient */
+  color: white; /* Text color */
+  padding: 20px; /* Padding */
+}
+
+/*^^^^^^^^^^^^^_________FLEX___________^^^^^^^^^^^^^ */
+.container {
+  display: flex; /* Flex container */
+  flex-direction: column; /* Flex direction */
+  justify-content: center; /* Main axis alignment */
+  align-items: flex-start; /* Cross axis alignment */
+  flex-wrap: wrap; /* Flex items wrapping */
+  align-content: space-around; /* Alignment of flex lines */
+}
+
+.item {
+  flex: 1 1 auto; /* Flex grow, shrink, and basis */
+  order: 2; /* Flex item order */
+  align-self: flex-end; /* Alignment of individual flex item */
+  margin: 10px; /* Margin */
+}
+
+.column {
+  flex-direction: column; /* Flex direction */
+}
+
+.center {
+  justify-content: center; /* Main axis alignment */
+  align-items: center; /* Cross axis alignment */
+}
+
+/*^^^^^^^^^^^^^_________GRID___________^^^^^^^^^^^^^ */
+
+.grid-container {
+  display: grid; /* Grid container */
+  grid-template-columns: 100px 200px auto; /* Grid columns */
+  grid-template-rows: 50px 100px; /* Grid rows */
+  gap: 10px; /* Gap between grid items */
+  justify-items: center; /* Alignment of grid items along the inline axis */
+  align-items: start; /* Alignment of grid items along the block axis */
+  justify-content: space-between; /* Alignment of grid tracks along the inline axis */
+  align-content: space-around; /* Alignment of grid tracks along the block axis */
+}
+
+.grid-item {
+  grid-column: 2 / 4; /* Grid column start / end */
+  grid-row: 1 / span 2; /* Grid row start / end */
+  justify-self: start; /* Alignment of individual grid item along the inline axis */
+  align-self: end; /* Alignment of individual grid item along the block axis */
+  margin: 10px; /* Margin around grid item */
+}
+
+.grid-item:nth-child(odd) {
+  background-color: #e0e0e0; /* Background color for odd grid items */
+}
+
+.grid-item:nth-child(even) {
+  background-color: #f0f0f0; /* Background color for even grid items */
+}
+
+/*^^^^^^^^^^^^^_________POSITION___________^^^^^^^^^^^^^ */
+
+.positioned {
+  position: relative; /* Specifies the positioning method */
+  top: 20px; /* Moves the element 20 pixels down from its normal position */
+  right: 10px; /* Moves the element 10 pixels to the right from its normal position */
+  bottom: 30px; /* Moves the element 30 pixels up from its normal position */
+  left: 5px; /* Moves the element 5 pixels to the left from its normal position */
+  z-index: 1; /* Sets the stack order of the positioned element */
+}
+
+.absolute {
+  position: absolute; /* Specifies absolute positioning */
+  top: 50%; /* Positions the element vertically at 50% of its containing block */
+  left: 50%; /* Positions the element horizontally at 50% of its containing block */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Centers the element horizontally and vertically */
+}
+
+.fixed {
+  position: fixed; /* Specifies fixed positioning */
+  top: 0; /* Positions the element at the top of the viewport */
+  right: 0; /* Positions the element at the right of the viewport */
+}
+
+.sticky {
+  position: sticky; /* Specifies sticky positioning */
+  top: 0; /* Positions the element at the top of its containing block until it reaches the specified offset */
+}
+
+.float {
+  float: left; /* Specifies floating positioning */
+  margin-right: 20px; /* Adds margin to the right of the floated element */
+}
+
+.clearfix::after {
+  content: ""; /* Creates a pseudo-element */
+  display: table; /* Generates a block-level element */
+  clear: both; /* Clears floated elements */
+}
+
+/*^^^^^^^^^^^^^_________TRANSITION___________^^^^^^^^^^^^^ */
+
+.transition {
+  transition-property: width height background-color; /* Specifies the properties to which transitions will be applied */
+  transition-duration: 0.5s; /* Specifies the duration of the transition effect */
+  transition-timing-function: ease-in-out; /* Specifies the timing function of the transition */
+  transition-delay: 0s; /* Specifies the delay before the transition effect starts */
+}
+
+.hover-effect:hover {
+  width: 200px; /* New width on hover */
+  height: 200px; /* New height on hover */
+  background-color: #ff0000; /* New background color on hover */
+}
+
+/*^^^^^^^^^^^^^_________BEFORE AND AFTER (PSEUDO ELEMENTS)___________^^^^^^^^^^^^^ */
+
+.element::before {
+  content: "Before"; /* Specifies the content of the pseudo-element */
+  display: block; /* Makes the pseudo-element a block-level element */
+  position: absolute; /* Specifies absolute positioning for the pseudo-element */
+  top: 0; /* Positions the pseudo-element at the top of its parent element */
+  left: 0; /* Positions the pseudo-element at the left of its parent element */
+  width: 100px; /* Sets the width of the pseudo-element */
+  height: 100px; /* Sets the height of the pseudo-element */
+  background-color: #ff0000; /* Sets the background color of the pseudo-element */
+  z-index: -1; /* Sets the stack order of the pseudo-element */
+}
+
+.element::after {
+  content: "After"; /* Specifies the content of the pseudo-element */
+  display: block; /* Makes the pseudo-element a block-level element */
+  position: relative; /* Specifies relative positioning for the pseudo-element */
+  top: 10px; /* Positions the pseudo-element 10 pixels below its normal position */
+  left: 10px; /* Positions the pseudo-element 10 pixels to the right of its normal position */
+  width: 100px; /* Sets the width of the pseudo-element */
+  height: 100px; /* Sets the height of the pseudo-element */
+  background-color: #00ff00; /* Sets the background color of the pseudo-element */
+  z-index: -1; /* Sets the stack order of the pseudo-element */
+}
+
+/*^^^^^^^^^^^^^_________Media query ___________^^^^^^^^^^^^^ */
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%; /* Adjusts the width of the container for smaller screens */
+  }
+
+  .item {
+    float: none; /* Removes the float property for grid items on smaller screens */
+  }
+}
+
+@media (orientation: landscape) {
+  .header {
+    display: none; /* Hides the header in landscape orientation */
+  }
+}
+
+@media print {
+  .no-print {
+    display: none; /* Hides elements with the class 'no-print' when printing */
+  }
+}
+
+@media (hover: hover) {
+  .hover-effect:hover {
+    color: red; /* Adds a hover effect only for devices that support hover */
+  }
+}
+
+/*^^^^^^^^^^^^^_________:ROOT (VARIABLES)___________^^^^^^^^^^^^^ */
+
+:root {
+  --primary-color: #007bff; /* Primary color variable */
+  --secondary-color: #6c757d; /* Secondary color variable */
+  --font-size: 16px; /* Font size variable */
+  --spacing: 10px; /* Spacing variable */
+}
+
+body {
+  color: var(--primary-color); /* Uses the primary color variable */
+  font-size: var(--font-size); /* Uses the font size variable */
+  margin: calc(
+    var(--spacing) * 2
+  ); /* Uses the spacing variable for margin calculation */
+}
+
+.container {
+  background-color: var(
+    --secondary-color
+  ); /* Uses the secondary color variable */
+  padding: var(--spacing); /* Uses the spacing variable for padding */
+}
+
+/*^^^^^^^^^^^^^_________Hover and Focus___________^^^^^^^^^^^^^ */
+
+.button {
+  padding: 10px 20px; /* Padding for the button */
+  border: 1px solid transparent; /* Border for the button */
+  border-radius: 5px; /* Border radius for the button */
+  background-color: #007bff; /* Background color for the button */
+  color: #ffffff; /* Text color for the button */
+  text-decoration: none; /* Removes default text decoration */
+  transition: all 0.3s ease; /* Transition effect for smooth changes */
+}
+/* Hover state */
+.button:hover {
+  background-color: #0056b3; /* Change background color on hover */
+}
+/* Focus state */
+.button:focus {
+  outline: none; /* Removes default focus outline */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Adds focus border */
+}
+
+/*^^^^^^^^^^^^^_________KEYFRAMES___________^^^^^^^^^^^^^ */
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%); /* Start position of the element */
+    opacity: 0; /* Start opacity of the element */
+  }
+  100% {
+    transform: translateX(0); /* End position of the element */
+    opacity: 1; /* End opacity of the element */
+  }
+}
+
+.slide {
+  width: 100px; /* Width of the element */
+  height: 100px; /* Height of the element */
+  background-color: #007bff; /* Background color of the element */
+  animation: slide-in 1s ease-out; /* Applies the animation to the element */
+}
